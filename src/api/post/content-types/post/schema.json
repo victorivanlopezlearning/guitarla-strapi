@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "guitars",
+  "collectionName": "posts",
   "info": {
-    "singularName": "guitar",
-    "pluralName": "guitars",
-    "displayName": "Guitars",
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "Blog",
     "description": ""
   },
   "options": {
@@ -12,15 +12,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
+    "title": {
       "type": "string",
       "required": true
     },
-    "description": {
-      "type": "richtext"
-    },
-    "price": {
-      "type": "integer"
+    "content": {
+      "type": "richtext",
+      "required": true
     },
     "image": {
       "type": "media",
@@ -32,7 +30,7 @@
     },
     "url": {
       "type": "uid",
-      "targetField": "name"
+      "targetField": "title"
     }
   }
 }

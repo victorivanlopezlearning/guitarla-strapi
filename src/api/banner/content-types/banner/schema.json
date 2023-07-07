@@ -1,10 +1,10 @@
 {
-  "kind": "collectionType",
-  "collectionName": "guitars",
+  "kind": "singleType",
+  "collectionName": "banners",
   "info": {
-    "singularName": "guitar",
-    "pluralName": "guitars",
-    "displayName": "Guitars",
+    "singularName": "banner",
+    "pluralName": "banners",
+    "displayName": "Banner",
     "description": ""
   },
   "options": {
@@ -12,15 +12,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
+    "title": {
       "type": "string",
       "required": true
     },
-    "description": {
-      "type": "richtext"
-    },
-    "price": {
-      "type": "integer"
+    "content": {
+      "type": "richtext",
+      "required": true,
+      "maxLength": 320
     },
     "image": {
       "type": "media",
@@ -29,10 +28,6 @@
       "allowedTypes": [
         "images"
       ]
-    },
-    "url": {
-      "type": "uid",
-      "targetField": "name"
     }
   }
 }
